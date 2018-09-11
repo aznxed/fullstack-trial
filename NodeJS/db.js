@@ -1,5 +1,6 @@
-/*
 const mongoose = require('mongoose');
+const { Pool, Client } = require('pg');
+
 mongoose.connect('mongodb://localhost:27017/crudDB', { useNewUrlParser: true }, (err)=>{
     if(!err){
         console.log('MongoDB connection succeeded');
@@ -9,10 +10,9 @@ mongoose.connect('mongodb://localhost:27017/crudDB', { useNewUrlParser: true }, 
     }
 });
 
-module.exports = mongoose;*/
+module.exports = mongoose;
 
-const { Pool, Client } = require('pg');
-
+/*
 const pool = new Pool({
   user: 'edward',
   host: '162.129.225.247',
@@ -25,4 +25,5 @@ pool.query('SELECT NOw()', (err, res) => {
   console.log(err, res)
   pool.end()
 });
+*/
 
