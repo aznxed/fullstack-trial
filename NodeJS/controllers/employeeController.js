@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 
 router.get('/:id', (req, res) => {
     if(!ObjectId.isValid(req.params.id)){
-        return res.status(400).send('No record with given id: ${req.params.id}');
+        return res.status(400).send(`No record with given id: ${req.params.id}`);
     }
 
     Employee.findById(req.params.id, (err, doc) => {
@@ -49,7 +49,7 @@ router.post('/', (req, res) => {
 
 router.put('/:id', (req, res)=>{
     if(!ObjectId.isValid(req.params.id)){
-        return res.status(400).send('No record with that ID : ${req.params.id}');
+        return res.status(400).send(`No record with that ID : ${req.params.id}`);
     }
 
     var emp = {

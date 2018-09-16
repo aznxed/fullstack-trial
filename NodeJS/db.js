@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const { Pool, Client } = require('pg');
+
 
 mongoose.connect('mongodb://localhost:27017/crudDB', { useNewUrlParser: true }, (err)=>{
     if(!err){
